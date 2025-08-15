@@ -51,6 +51,15 @@ namespace Guns_Survival_Leaderboard_Tester.Controller
                             await _service.ResetLeaderboardAsync();
                             _view.ShowMessage("Leaderboard reset successfully.");
                             break;
+                        case "6":
+                            Random random = new Random();
+                            for(int  i =0; i< 50; i++)
+                            {
+                                ScoreCreate entry = new ScoreCreate(random.Next(1000), random.Next(500), $"사용자{random.Next(1000)}");
+                                created = await _service.AddScoreAsync(entry);
+                                _view.ShowMessage($"Added: {created.nickname} ({created.score}) ID={created.id}");
+                            }
+                            break;
                         case "0":
                             return;
                         default:

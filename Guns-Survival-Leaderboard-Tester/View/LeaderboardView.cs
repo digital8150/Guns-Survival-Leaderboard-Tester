@@ -14,6 +14,7 @@ namespace Guns_Survival_Leaderboard_Tester.View
             Console.WriteLine("3. Get Around ID");
             Console.WriteLine("4. Delete Score");
             Console.WriteLine("5. Reset Leaderboard");
+            Console.WriteLine("6. Add Random Score 50 (stress test!)");
             Console.WriteLine("0. Exit");
             Console.Write("Select option: ");
         }
